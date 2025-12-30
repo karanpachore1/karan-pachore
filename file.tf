@@ -38,4 +38,12 @@ resource "aws_instance" "myinstance1" {
   variable "key_name" {
     default = "t1-key"
   }
-  
+
+  output "instance_id" {
+    value = aws_instance.myinstance1.public.ip
+    
+  }
+  output "instance_id" {
+    value = aws_instance.myinstance1.id
+    
+  }
