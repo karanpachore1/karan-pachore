@@ -39,11 +39,11 @@ resource "aws_instance" "myinstance1" {
     default = "t1-key"
   }
 
-  output "instance_id" {
-    value = aws_instance.myinstance1.public.ip
+  output "instance_public_ip" {
+    value = "aws_instance.myinstance1.public.ip"
     
   }
   output "instance_id" {
-    value = aws_instance.myinstance1.id
+    value = "aws_instance.myinstance1.id"
     
   }
