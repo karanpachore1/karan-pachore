@@ -16,10 +16,10 @@ provider "aws" {
 
 resource "aws_instance" "myinstance1" {
 
-    ami = "ami-087d1c9a513324697"
-    instance_type = "t3.micro"
+    ami = var.ami_id
+    instance_type = var.instance_type
     vpc_security_group_ids = ["sg-00bdd2050b067edca"]
-    key_name = "t1-key"
+    key_name = key_name
     availability_zone = "ap-south-1a"
 
     tags = {
@@ -27,3 +27,15 @@ resource "aws_instance" "myinstance1" {
     }
 
   }
+
+  variable "ami_id" {
+    default = "ami-087d1c9a513324697"
+  }
+
+  variable "instance_type" {
+    default = "t3.micro"
+  }
+  variable "" {
+    default = "t1-key"
+  }
+  
