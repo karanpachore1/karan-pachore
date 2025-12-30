@@ -19,7 +19,7 @@ resource "aws_instance" "myinstance1" {
     ami = var.ami_id
     instance_type = var.instance_type
     vpc_security_group_ids = ["sg-00bdd2050b067edca"]
-    key_name = key_name
+    key_name = var.key_name
     availability_zone = "ap-south-1a"
 
     tags = {
