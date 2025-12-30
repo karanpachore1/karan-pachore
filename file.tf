@@ -40,7 +40,7 @@ resource "aws_instance" "myinstance1" {
   }
 
   output "instance_public_ip" {
-    value =aws_instance.myinstance1
+    value = aws_instance.myinstance1.public_ip
     
   }
   output "instance_id" {
