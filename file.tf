@@ -1,3 +1,14 @@
+
+terraform {
+  backend "s3" {
+  bucket = "tf-bucketkp"
+  region = "ap-south-1"
+  key = "tfstate"
+  }
+}
+
+
+
 provider "aws" {
   region = "ap-south-1"
 }
@@ -16,9 +27,4 @@ resource "aws_instance" "myinstance1" {
       Name = "myinstance1"
     }
 
-  }
-
-  resource "aws_security_group" "testing" {
-
-    
   }
