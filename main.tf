@@ -5,7 +5,7 @@ locals {
 terraform {
   backend "s3" {
     bucket = "batch151234"
-    region = "us-east-1"
+    region = "ap-south-1"
     key = "tfstate"
   }
 }
