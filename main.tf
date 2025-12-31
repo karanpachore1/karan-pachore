@@ -12,7 +12,7 @@ terraform {
 data "aws_security_group" "mysg3" {
   filter {
     name   = "vpc-id"
-    values = [vpc-vpc_security_group_ids]
+    values = [var.vpc_id]
   }
   filter {
     name   = "group-name"
