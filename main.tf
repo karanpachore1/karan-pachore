@@ -9,20 +9,20 @@ terraform {
     key = "tfstate"
   }
 }
-data "aws_security_group" "mysg" {
+data "aws_security_group" "mysg3" {
   filter {
     name   = "vpc-id"
     values = [vpc-vpc_security_group_ids]
   }
   filter {
     name   = "group-name"
-    values = ["mysg"]
+    values = ["mysg3"]
   }
 }
 resource "aws_instance" "myinstance" {
   ami = var.ami_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.mysg.id]
+  vpc_security_group_ids = [data.aws_security_group.mysg3]
   key_name = var.key_name
   tags = {
     Name = local.instance_name
