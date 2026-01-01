@@ -4,7 +4,7 @@ locals {
 }
 terraform {
   backend "s3" {
-    bucket = "tf-bucketkp"
+    bucket = "batch151234"
     region = "ap-south-1"
     key = "tfstate"
   }
@@ -22,7 +22,7 @@ data "aws_security_group" "mysg3" {
 resource "aws_instance" "myinstance" {
   ami = var.ami_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.mysg3]
+  vpc_security_group_ids = [data.aws_security_group.mysg3.id]
   key_name = var.key_name
   tags = {
     Name = local.instance_name
