@@ -8,3 +8,6 @@ variable "ami_id" {
   variable "key_name" {
     default = "t1-key"
   }
+  variable "vpc_id" {
+    default = "vpc-0a3ca7363e3f8283a"
+  }
