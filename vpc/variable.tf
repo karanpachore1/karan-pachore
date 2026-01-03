@@ -1,5 +1,6 @@
 variable "region" {
   description = "AWS region"
+  type        = string
   default     = "ap-south-1"
 }
 
@@ -51,17 +52,17 @@ variable "key_pair" {
   default = "t1-key"
   
 }
-variable "pvt-tags" {
+variable "pvt_tags" {
   type = map
   default = {
-    name = "pvt-instance"
+    name = "pvt_instance"
     env = "terraform-practice"
   }
 }
-variable "pub-tags" {
+variable "pub_tags" {
   type = map
   default = {
-    name = "pvt-instance"
+    name = "pub_instance"
     env = "terraform-practice"
   }
 }

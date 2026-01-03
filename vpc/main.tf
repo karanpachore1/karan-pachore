@@ -93,29 +93,29 @@ resource "aws_security_group" "sg1" {
   }
   
 }
-resource "aws-instance" "pvt-instance" {
+resource "aws_instance" "pvt_instance" {
   ami = var.ami
   instance_type = var.instance_type
   key_name = var.key_pair
-  tags = var.pvt-tags
-  subnet_id = aws_subnet.pvt-subnet.id
+  tags = var.pvt_tags
+  subnet_id = aws_subnet.pvtmysubnet.id
   vpc_security_group_ids = [aws_security_group.sg1.id]
 
 }
-resource "aws-instance" "pub-instance" {
+resource "aws_instance" "pub_instance" {
   ami = var.ami
   instance_type = var.instance_type
   key_name = var.key_pair
-  tags = var.pvt-tags
-  subnet_id = aws_subnet.pvt-subnet.id
+  tags = var.pub_tags
+  subnet_id = aws_subnet.pubsubnet.id
   vpc_security_group_ids = [aws_security_group.sg1.id]
 
 }
-resource "aws_instance" "pub-instance" {
+resource "aws_instance" "pub_instance" {
   ami = var.ami
   instance_type = var.instance_type
   key_name = var.key_pair
-  tags = var.pub-tags
+  tags = var.pub_tags
   subnet_id = aws_subnet.pubsubnet.id
   vpc_security_group_ids = [aws_security_group.sg1]
 
