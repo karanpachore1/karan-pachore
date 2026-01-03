@@ -13,7 +13,7 @@ variable "vpc_cidr" {
 variable "private_subnet_cidr" {
   description = "CIDR block for private subnet"
   type        = string
-  default     = "10.0.1.0/20"
+  default     = "10.0.1.0/24"
 }
 
 variable "public_subnet_cidr" {
@@ -33,3 +33,50 @@ variable "az_public" {
   type        = string
   default     = "ap-south-1b"
 }
+
+variable "project" {
+  default = "cloud"
+}
+variable "instance_type" {
+  description = "enter instance type"
+  default = "t3.micro"
+  
+}
+variable "ami" {
+  description = "enter ami id"
+  default = "ami-02b8269d5e85954ef"
+    
+}
+variable "key_pair" {
+  description = "enter kay pair"
+  default = "t1-key"
+  
+}
+variable "pvt-tags" {
+  type = map
+  default = {
+    name = "pvt-instance"
+    env = "terraform-practice"
+  }
+}
+variable "pub-tags" {
+  type = map
+  default = {
+    name = "pvt-instance"
+    env = "terraform-practice"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
