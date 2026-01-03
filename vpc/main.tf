@@ -110,14 +110,7 @@ resource "aws_instance" "pub_instance" {
   subnet_id = aws_subnet.pubsubnet.id
   vpc_security_group_ids = [aws_security_group.sg1.id]
 
-}
-resource "aws_instance" "pub_instance" {
-  ami = var.ami
-  instance_type = var.instance_type
-  key_name = var.key_pair
-  tags = var.pub_tags
-  subnet_id = aws_subnet.pubsubnet.id
-  vpc_security_group_ids = [aws_security_group.sg1]
+
 
   user_data = <<-EDF
   #!/bin/bash
@@ -129,6 +122,17 @@ resource "aws_instance" "pub_instance" {
   EDF
   depends_on = [ aws_security_group.sg1 ]
 }
+
+
+# resource "aws_instance" "pub_instance" {
+#   ami = var.ami
+#   instance_type = var.instance_type
+#   key_name = var.key_pair
+#   tags = var.pub_tags
+#   subnet_id = aws_subnet.pubsubnet.id
+#   vpc_security_group_ids = [aws_security_group.sg1]
+
+  
 
 
 
