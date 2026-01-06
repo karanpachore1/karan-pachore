@@ -22,7 +22,7 @@ module "vpc" {
 }
 
 module "ec2" {
-  source = "./modules/ec2"
+  source = "./modules/Ec2"
 
   ami             = var.ami
   instance_type   = var.instance_type
