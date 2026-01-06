@@ -21,8 +21,8 @@ module "vpc" {
   project              = var.project
 }
 
-module "Ec2" {
-  source = "./modules/Ec2"
+module "ec2" {
+  source = "./modules/ec2"
 
   ami             = var.ami
   instance_type   = var.instance_type
