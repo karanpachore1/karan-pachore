@@ -21,7 +21,7 @@ module "vpc" {
   project              = var.project
 }
 
-module "ec2" {
+module "Ec2" {
   source = "./modules/Ec2"
 
   ami             = var.ami
