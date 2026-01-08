@@ -1,6 +1,8 @@
 - name: my 1st playbook
-  hosts: all
+  hosts: localhosts
   tasks:
     - name: print welcome 
       debug:
         msg: "hello welcome to ansible"
+
+
