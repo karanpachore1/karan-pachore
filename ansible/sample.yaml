@@ -3,4 +3,4 @@
   tasks:
     - name: print welcome 
       debug:
-       msg:"hello welcome to andsible"
+        msg: "hello welcome to ansible"
