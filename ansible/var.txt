@@ -1,1 +1,1 @@
-animal:python
+animal: python
