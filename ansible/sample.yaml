@@ -13,7 +13,7 @@
         msg: "{{animal}}"
     - name: print animal2
       debug:
-        msg: "{{dog}}"
+        msg: "{{animal}}"
     - name: print animal3
       debug:
         msg: "{{animal}}"
