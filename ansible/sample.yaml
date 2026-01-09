@@ -2,11 +2,12 @@
   hosts: localhost
   vars:
     animal: "tiger"   #
-  vars_files:
-    - ./var.txt
+  # vars_files:
+  #   - ./var.txt
   vars_prompt:
     - name : animal
       prompt: Enter the animal name
+      private: false
   tasks:
     - name: print animal 
       debug:
