@@ -10,10 +10,10 @@
         msg: "{{animal}}"
     - name: print animal2
       debug:
-        msg: "{{animal1}}"
+        msg: "{{animal}}"
     - name: print animal3
       debug:
-        msg: "{{animal1}}"
+        msg: "{{animal}}"
       vars:
         animal: "lion"
 
