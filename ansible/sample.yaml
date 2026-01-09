@@ -2,16 +2,18 @@
   hosts: localhost
   vars:
     animal: "tiger"   #
+  vars_files:
+    - ./var/txt
   tasks:
     - name: print animal 
       debug:
         msg: "{{animal}}"
     - name: print animal2
       debug:
-        msg: "{{animal}}"
+        msg: "{{animal1}}"
     - name: print animal3
       debug:
-        msg: "{{animal}}"
+        msg: "{{animal1}}"
       vars:
         animal: "lion"
 
