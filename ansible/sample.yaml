@@ -4,13 +4,14 @@
     animal: "tiger"   #
   vars_files:
     - ./var.txt
+    - ./var1.txt
   tasks:
     - name: print animal 
       debug:
         msg: "{{animal}}"
     - name: print animal2
       debug:
-        msg: "{{animal}}"
+        msg: "{{dog}}"
     - name: print animal3
       debug:
         msg: "{{animal}}"
