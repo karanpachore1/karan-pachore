@@ -1,0 +1,10 @@
+- name: Install and configure web servbers 
+  hosts: all
+  become: true 
+
+  tasks:
+    - name: Install apache on Debian (ubuntu)
+      package:
+        name: apache2
+        state: present
+      when: ansible_os_family
