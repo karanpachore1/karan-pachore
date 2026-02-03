@@ -20,7 +20,7 @@ kind: Service
 metadata: 
   name: myhttp-svc
 spec: 
-  type: NordPort
+  type: NodePort
   selector:
     app: myapp
   ports:
