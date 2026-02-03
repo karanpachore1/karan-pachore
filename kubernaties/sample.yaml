@@ -1,0 +1,16 @@
+apiversion: v1
+kind: Pod
+metadata: 
+  name: myhttp
+  labels: 
+    app: myapp
+    env: devops
+spec:
+  containers:
+    - name: http
+      images: httpd
+      ports:
+        - name: http-port
+          containerPort: 80
+                   
+    
