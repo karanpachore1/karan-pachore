@@ -25,7 +25,7 @@ spec:
     app: myapp
 ports:
 - port: 80
-  targetPort: 81
+  targetPort: 80
 
                    
     
