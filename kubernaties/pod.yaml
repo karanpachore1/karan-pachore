@@ -23,9 +23,9 @@ spec:
   type: NordPort
   selector:
     app: myapp
-ports:
-- port: 80
-  targetPort: 80
+  ports:
+    - port: 80
+      targetPort: 80
 
                    
     
